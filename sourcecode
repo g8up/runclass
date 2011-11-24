@@ -4,7 +4,7 @@ rem runClassV3.2.bat
 rem 双击本批处理即可安装
 rem 安装须知：预先安装了jdk，并设置了环境变量%java_home%、%path%、%classpath%
 rem 笃行天下制作 http://hi.baidu.com/duxing
-rem 如果您更新了本文件，能分享给我吗？softor@vip.qq.com
+rem 如果您更新了本文件，能分享给我吗？
 rem 讨论页面：http://url.cn/3MRBYi
 rem 更新日期：2011年2月9日 15:30:20
 rem ---------------------------------------------------------------------------
