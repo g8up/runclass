@@ -1,33 +1,33 @@
 @echo off
 rem ---------------------------------------------------------------------------
 rem runClassV3.0.bat
-rem Ë«»÷±¾Åú´¦Àí¼´¿É°²×°
-rem °²×°ĞëÖª£ºÔ¤ÏÈ°²×°ÁËjdk£¬²¢ÉèÖÃÁË»·¾³±äÁ¿%java_home%¡¢%path%¡¢%classpath%
-rem óÆĞĞÌìÏÂÖÆ×÷ http://hi.baidu.com/duxing 2010Äê5ÔÂ18ÈÕ8:42:24
-rem Èç¹ûÄú¸üĞÂÁË±¾ÎÄ¼ş£¬ÄÜ·ÖÏí¸øÎÒÂğ£¿softor@vip.qq.com
-rem ÌÖÂÛÒ³Ãæ£ºhttp://t.cn/hbAKZY
-rem ¸üĞÂÈÕÆÚ£º2010Äê11ÔÂ26ÈÕ 14:32:44
+rem åŒå‡»æœ¬æ‰¹å¤„ç†å³å¯å®‰è£…
+rem å®‰è£…é¡»çŸ¥ï¼šé¢„å…ˆå®‰è£…äº†jdkï¼Œå¹¶è®¾ç½®äº†ç¯å¢ƒå˜é‡%java_home%ã€%path%ã€%classpath%
+rem ç¬ƒè¡Œå¤©ä¸‹åˆ¶ä½œ http://hi.baidu.com/duxing 2010å¹´5æœˆ18æ—¥8:42:24
+rem å¦‚æœæ‚¨æ›´æ–°äº†æœ¬æ–‡ä»¶ï¼Œèƒ½åˆ†äº«ç»™æˆ‘å—ï¼Ÿsoftor@vip.qq.com
+rem è®¨è®ºé¡µé¢ï¼šhttp://t.cn/hbAKZY
+rem æ›´æ–°æ—¥æœŸï¼š2010å¹´11æœˆ26æ—¥ 14:32:44
 rem ---------------------------------------------------------------------------
 
-echo ¡¾×¢Òâ£ºÔËĞĞÇ°ÇëÈ·¶¨Äú°²×°ÁËjdk£¬²¢ÉèÖÃÁË»·¾³±äÁ¿%%java_home%%¡¢%%path%%¡¢%%classpath%%¡¿
+echo ã€æ³¨æ„ï¼šè¿è¡Œå‰è¯·ç¡®å®šæ‚¨å®‰è£…äº†jdkï¼Œå¹¶è®¾ç½®äº†ç¯å¢ƒå˜é‡%%java_home%%ã€%%path%%ã€%%classpath%%ã€‘
 echo.
 if not "%java_home%" == "" goto associate
-echo Ã»ÓĞÉèÖÃ»·¾³±äÁ¿%java_home%,ÇëÉèÖÃºóÔÙ°²×°!
+echo æ²¡æœ‰è®¾ç½®ç¯å¢ƒå˜é‡%java_home%,è¯·è®¾ç½®åå†å®‰è£…!
 echo.
 goto over
 
 :associate
-echo.ÕıÔÚ¹ØÁªclassÎÄ¼ş´ò¿ª·½Ê½ ...
+echo.æ­£åœ¨å…³è”classæ–‡ä»¶æ‰“å¼€æ–¹å¼ ...
 reg add HKEY_CLASSES_ROOT\.class /f /ve /t REG_SZ /d "classfile"
 reg add HKEY_CLASSES_ROOT\classfile\DefaultIcon /f /ve /t REG_EXPAND_SZ /d "%%java_home%%\bin\java.exe,0"
-reg add HKEY_CLASSES_ROOT\classfile\shell\run\command /f /ve /t REG_EXPAND_SZ /d "cmd /c echo off & (for %%%%i in (\"%%1\") do ( title %%%%~niÔËĞĞ½á¹û & cd /d \"%%%%~dpi\" & java \"%%%%~ni\" ) )& pause"
+reg add HKEY_CLASSES_ROOT\classfile\shell\run\command /f /ve /t REG_EXPAND_SZ /d "cmd /c echo off & (for %%%%i in (\"%%1\") do ( title %%%%~niè¿è¡Œç»“æœ & cd /d \"%%%%~dpi\" & java \"%%%%~ni\" ) )& pause"
 echo.
-echo.¹ØÁªclassÎÄ¼şÍê±Ï!
+echo.å…³è”classæ–‡ä»¶å®Œæ¯•!
 echo.
 goto end
 
 :end
-echo.°²×°Íê±Ï!
+echo.å®‰è£…å®Œæ¯•!
 echo.
 
 :over
